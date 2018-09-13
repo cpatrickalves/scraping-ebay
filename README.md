@@ -1,8 +1,12 @@
-# scraping-ebay
+# Scraping eBay
 
 This project contains a set of scripts used to scrape Ebay's products data using Scrapy Web Crawling Framework.
 
 In the current stage, the list of products scraped is defined by a search string (the same used in eBay web page). The search string can be changed in ebay.py file (located at scraping_ebay\spiders).
+
+An example of the scraped data can be found in the ***data/*** folder.
+
+The image below shows a scraped data for the *"Nintendo switch"* search string in ebay.com
 
 # How to use
 
