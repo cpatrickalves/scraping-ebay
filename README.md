@@ -2,7 +2,7 @@
 
 This project contains a set of scripts used to scrape Ebay's products data using [Scrapy Web Crawling Framework](https://scrapy.org/).
 
-In the current stage, the list of products scraped is defined by a search string (the same used in eBay web page). The search string can be changed in ebay.py file (located at scraping_ebay\spiders).
+In the current stage, the list of products scraped is defined by a search string (the same used in eBay web page). 
 
 An example of the scraped data can be found in the ***data/*** folder.
 
@@ -24,3 +24,8 @@ Once you have installed *scrapy* framework, just clone/download this project, ac
 *scrapy crawl ebay -o products.csv*
 
 You can change the output format to JSON or XML by change the output file extension (ex: *products.json*).
+
+The default search string is *nintendo switch console* and it can be changed in the command line with the *-a* flag.
+For example, to search to *Xbox one X* you can use:
+
+*scrapt crawl ebay -o products.csv -a search="Xbox one X"*
