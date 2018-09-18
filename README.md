@@ -6,9 +6,10 @@ In the current stage, the list of products scraped is defined by a search string
 
 An example of the scraped data can be found in the ***data/*** folder.
 
-The image below shows a scraped data for the *"Nintendo switch console"* search string in ebay.com
+The image below shows a scraped data for the *"iphone X 256gb"* search string in ebay.com
 
-![example](https://user-images.githubusercontent.com/22003608/45506824-c8e81400-b766-11e8-98c3-0118d0950c97.PNG)
+![ebay_iphone_x_256gb_products_sample](https://user-images.githubusercontent.com/22003608/45721730-a6e3fc80-bb7f-11e8-8e8f-50103bf7c842.jpg)
+)
 
 # How to use
 
