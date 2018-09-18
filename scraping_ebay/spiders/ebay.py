@@ -58,8 +58,8 @@ class EbaySpider(scrapy.Spider):
 			yield{
 			"Name":name,
 			"Status":status,
-			"Seller_Level":seller_level,
-			"Location":location,
+			#"Seller_Level":seller_level,
+			#"Location":location,
 			"Price":price,
 			"Stars":stars,
 			"Ratings":ratings
