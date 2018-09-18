@@ -30,4 +30,4 @@ You can change the output format to JSON or XML by change the output file extens
 The default search string is *nintendo switch console* and it can be changed in the command line with the *-a* flag.
 For example, to search to *Xbox one X* you can use:
 
-*scrapt crawl ebay -o products.csv -a search="Xbox one X"*
+*scrapy crawl ebay -o products.csv -a search="Xbox one X"*
