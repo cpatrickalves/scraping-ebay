@@ -24,7 +24,7 @@ class EbaySpider(scrapy.Spider):
 	# Parse the search results
 	def parse_link(self, response):
 		# Extract the list of products 
-		results = response.xpath('//li[@class="s-item "]')
+		results = response.xpath('//li[@class="s-item   "]')
 		
 		# Extract info for each product
 		for product in results:		
@@ -66,12 +66,14 @@ class EbaySpider(scrapy.Spider):
 			}
 				
 		# Get the next page
-		next_page_url = response.xpath('//*[@class="x-pagination__control"][2]/@href').extract_first()
+		next_page_url = response.xpath('//*/a[@class="x-pagination__control"][2]/@href').extract_first()
 
 		# The last page do not have a valid url and ends with '#'
-		if str(next_page_url).endswith("#"):
+		if next_page_url == None or str(next_page_url).endswith("#"):
 			self.log("eBay products collected successfully !!!")
-		else:			
+		else:	
+			print('\n'+'-'*30)		
+			print('Next page: {}'.format(next_page_url))		
 			yield scrapy.Request(next_page_url, callback=self.parse_link)       				
 
 
