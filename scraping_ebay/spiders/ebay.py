@@ -64,7 +64,7 @@ class EbaySpider(scrapy.Spider):
 			"Price":price,
 			"Stars":stars,
 			"Ratings":ratings,
-                        "Link":link
+			"Link":link
 			}
 				
 		# Get the next page
