@@ -45,6 +45,7 @@ class EbaySpider(scrapy.Spider):
 			status = product.xpath('.//*[@class="SECONDARY_INFO"]/text()').extract_first()
 			seller_level = product.xpath('.//*[@class="s-item__etrs-text"]/text()').extract_first()
 			location = product.xpath('.//*[@class="s-item__location s-item__itemLocation"]/text()').extract_first()
+			link = product.xpath('.//a[@class="s-item__link"]/@href').extract_first()
 
 			# Set default values
 			stars = 0
@@ -62,7 +63,8 @@ class EbaySpider(scrapy.Spider):
 			#"Location":location,
 			"Price":price,
 			"Stars":stars,
-			"Ratings":ratings
+			"Ratings":ratings,
+			"Link":link
 			}
 				
 		# Get the next page
