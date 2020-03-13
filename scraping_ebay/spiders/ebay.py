@@ -24,7 +24,7 @@ class EbaySpider(scrapy.Spider):
 	# Parse the search results
 	def parse_link(self, response):
 		# Extract the list of products 
-		results = response.xpath('//li[@class="s-item   "]')
+		results = response.xpath('//div/div/ul/li[contains(@class, "s-item" )]')
 		
 		# Extract info for each product
 		for product in results:		
